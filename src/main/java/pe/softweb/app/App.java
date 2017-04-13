@@ -10,7 +10,7 @@ public class App {
         );
         path("/accesos", () -> {
             path("/usuario", () -> {
-                get("/litar", UsuarioHandler);
+                get("/listar", UsuarioHandler.listar);
             });
         });
     }    
