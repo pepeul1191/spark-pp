@@ -11,6 +11,7 @@ public class App {
         path("/usuario", () -> {
             get("/listar", UsuarioHandler.listar);
             get("/listar_usuarios", UsuarioHandler.listarUsuarios);
+            get("/listar_accesos/:usuario_id", UsuarioHandler.listarAccesos);
        });
     }    
 }
