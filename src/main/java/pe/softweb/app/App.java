@@ -8,10 +8,9 @@ public class App {
         get("/hello", (request, response) -> 
             "Hello World"
         );
-        path("/accesos", () -> {
-            path("/usuario", () -> {
-                get("/listar", UsuarioHandler.listar);
-            });
-        });
+        path("/usuario", () -> {
+            get("/listar", UsuarioHandler.listar);
+            get("/listar_usuarios", UsuarioHandler.listarUsuarios);
+       });
     }    
 }

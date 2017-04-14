@@ -1,17 +1,19 @@
 package pe.softweb.handlers;
 
+import pe.softweb.models.Usuarios;
 import spark.Request;
 import spark.Response;
 import spark.Route;
 
-public class UsuarioHandler implements Route{
+public class UsuarioHandler{
 
     public static Route listar= (Request request, Response response) -> {
-        return "listarUusuarios";
+        Usuarios u = new Usuarios();
+        return u.listar();
     };
     
-    @Override
-    public Object handle(Request rqst, Response rspns) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+     public static Route listarUsuarios= (Request request, Response response) -> {
+        Usuarios u = new Usuarios();
+        return u.listarUsuarios();
+    };
 }
